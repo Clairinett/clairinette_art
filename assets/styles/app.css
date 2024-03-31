@@ -1,6 +1,6 @@
-.offcanvas-backdrop{
-    display: none;
-}
+/* .offcanvas-backdrop{
+    display: none !important;
+} */
 
 @media (min-width:1200px) { /*à partir de 1200px la nav est ouverte voir js*/
     .btn-close {
@@ -8,5 +8,8 @@
     }
     #offcanvasNavbar {
         width: 300px;
+    }
+    .marge {
+        padding: 50px 50px 0 350px;
     }
 }

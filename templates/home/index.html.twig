@@ -4,5 +4,10 @@
 
 {% block body %}
 
+    {% for art in arts %}
+        <div class="marge">
+            <img src="/art/images/{{ art.pictureLink }}">
+        </div>
+    {% endfor %}
 
 {% endblock %}

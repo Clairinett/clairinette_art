@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+	<div class="container mt-3 w-50">
+
+		<h1 class="text-center pt-5">New art</h1>
+
+		{{ form_start(form) }}
+
+		<div class="form-group d-flex flex-column">
+			{{ form_label(form.picture_link) }}
+			{{ form_widget(form.picture_link) }}
+			<div class="form-error">
+				{{ form_errors(form.picture_link) }}
+			</div>
+		</div>
+
+		<div class="form-group d-flex flex-column">
+			{{ form_label(form.date) }}
+			{{ form_widget(form.date) }}
+			<div class="form-error">
+				{{ form_errors(form.date) }}
+			</div>
+		</div>
+
+		<div class="form-group d-flex flex-column">
+			{{ form_label(form.type) }}
+			{{ form_widget(form.type) }}
+			<div class="form-error">
+				{{ form_errors(form.type) }}
+			</div>
+		</div>
+
+		<div class="form-group d-flex flex-column">
+			{{ form_label(form.description) }}
+			{{ form_widget(form.description) }}
+			<div class="form-error">
+				{{ form_errors(form.description) }}
+			</div>
+		</div>
+
+		<div class="form-group">
+            {{ form_row(form.submit) }}
+        </div>
+
+		{{ form_end(form) }}
+	</div>
+
+{% endblock %}
