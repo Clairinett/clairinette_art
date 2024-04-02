@@ -1,13 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Galerie - Clairinette_{% endblock %}
+{% block title %}Galerie - Clairinette_
+{% endblock %}
 
 {% block body %}
+	<main>
+		<section class="home">
+			<ul class="gallery">
+				{% for art in arts %}
+					<li>
+						<picture>
+							<source srcset="/art/images/{{ art.pictureLink }}.webp" type="image/webp">
+							<source srcset="/art/images/{{ art.pictureLink }}.png" type="image/png">
 
-    {% for art in arts %}
-        <div class="marge">
-            <img src="/art/images/{{ art.pictureLink }}">
-        </div>
-    {% endfor %}
-
+							<img src="/art/images/{{ art.pictureLink }}" alt="{{ art.description }}" loading="lazy">
+						</picture>
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
 {% endblock %}

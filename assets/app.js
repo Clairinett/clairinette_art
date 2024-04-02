@@ -11,7 +11,7 @@ import './styles/app.css';
 
 
 const nav = document.getElementById('offcanvasNavbar');
-const li = document.querySelectorAll('li'); 
+// const li = document.querySelectorAll('li'); 
 
 if (window.matchMedia("(min-width:1200px)").matches) {
     nav.classList.add('show'); //la nav reste ouverte grâce à l'ajout de la class show
